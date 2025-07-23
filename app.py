@@ -11,13 +11,13 @@ import difflib
 import streamlit as st
 #fv
 # load model
-svc = pickle.load(open('C:/Users/atlar/OneDrive/Desktop/Health-Guide/svc.pkl','rb'))
-sym_des = pd.read_csv("C:/Users/atlar/OneDrive/Desktop/Health-Guide/archive/symtoms_df.csv")
-precautions = pd.read_csv("C:/Users/atlar/OneDrive/Desktop/Health-Guide/archive//precautions_df.csv")
-workout = pd.read_csv("C:/Users/atlar/OneDrive/Desktop/Health-Guide/archive//workout_df.csv")
-description = pd.read_csv("C:/Users/atlar/OneDrive/Desktop/Health-Guide/archive//description.csv")
-medications = pd.read_csv('C:/Users/atlar/OneDrive/Desktop/Health-Guide/archive//medications.csv')
-diets = pd.read_csv("C:/Users/atlar/OneDrive/Desktop/Health-Guide/archive//diets.csv")
+svc = pickle.load(open('svc.pkl','rb'))
+sym_des = pd.read_csv("archive/symtoms_df.csv")
+precautions = pd.read_csv("archive/precautions_df.csv")
+workout = pd.read_csv("archive/workout_df.csv")
+description = pd.read_csv("archive/description.csv")
+medications = pd.read_csv('archive/medications.csv')
+diets = pd.read_csv("archive/diets.csv")
 import difflib
 
 def resolve_symptom(symptom, symptom_dict, cutoff=0.7):
